@@ -1,0 +1,29 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}Flasky de Alexander{% endblock %}
+
+{% block navbar %}
+<div class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/">Flasky 🦎</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="{{url_for(index)}}">Inicio</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="page-header">
+        <h1>¡Hola, {{ name }}!</h1>
+    </div>
+    <div class="alert alert-info">
+        <p>Ahora tienes estilo Bootstrap... te ves bien✨</p>
+    </div>
+</div>
+{% endblock %}
