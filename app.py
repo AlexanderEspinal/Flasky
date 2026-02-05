@@ -1,11 +1,7 @@
 from flask import Flask, request,redirect ,make_response,render_template
-from flask_bootstrap import Bootstrap
 
 app = Flask(__name__)
-
-bootstrap = Bootstrap(app)
-
-       
+      
 @app.route("/")
 def index():
     return render_template("index.html", name='Pedro')
@@ -24,10 +20,9 @@ def cookies():
     response.set_cookie("Propiedad de", "Alexander")
     return response
 
-@app.route("/escape")
-def ruta_externa():
-    return redirect("https://archlinux.org", code=302)
 
+if __name__ == "__main__":
+    app.run(debug=True)
 
     
 
